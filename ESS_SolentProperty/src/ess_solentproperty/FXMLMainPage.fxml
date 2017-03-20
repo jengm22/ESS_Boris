@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar fx:id="menuMain" prefHeight="25.0" prefWidth="640.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="miLogout" mnemonicParsing="false" onAction="#logout" text="Log Out" />
+                  <MenuItem fx:id="miExit" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuAccounts" mnemonicParsing="false" text="Accounts">
+            <items>
+              <MenuItem fx:id="miMyAccount" mnemonicParsing="false" onAction="#myAccount" text="My Account" />
+                  <SeparatorMenuItem fx:id="smiAccounts" mnemonicParsing="false" />
+                  <MenuItem fx:id="miViewAccounts" mnemonicParsing="false" onAction="#viewAccounts" text="View Accounts" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuStock" mnemonicParsing="false" text="Stock">
+            <items>
+              <MenuItem fx:id="miStock" mnemonicParsing="false" onAction="#checkStock" text="Check stock" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <GridPane fx:id="gpMain" hgap="5.0" layoutX="14.0" layoutY="34.0" prefHeight="310.0" prefWidth="610.0" style="-fx-border-color: red;" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="35.0" minWidth="0.0" prefWidth="35.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="342.0" minWidth="10.0" prefWidth="340.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="75.0" minWidth="75.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="40.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="40.0" percentHeight="0.0" prefHeight="40.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblNumber" alignment="CENTER" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #DDDDDD;" text="#" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblAddress" prefHeight="35.0" prefWidth="395.0" style="-fx-background-color: #DDDDDD;" text="Address" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lblStatus" prefHeight="35.0" prefWidth="239.0" style="-fx-background-color: #DDDDDD;" text="Status" GridPane.columnIndex="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+            <Label fx:id="lblServices" alignment="CENTER" prefHeight="35.0" prefWidth="321.0" style="-fx-background-color: #DDDDDD;" text="Services" GridPane.columnIndex="3" GridPane.columnSpan="2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
