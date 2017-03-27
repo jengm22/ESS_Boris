@@ -1,7 +1,10 @@
 package ess_solentproperty;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
- * @author 1leszd34
+ * @author Dean Leszman - 1LESZD34
  */
 class Account {
     private String username;
@@ -34,4 +37,16 @@ class Account {
     public void setPassword(String p) { password = p; }
     public void setAdminStatus(boolean a) { isAdmin = a; }
 
+    public boolean isValid(String type, String value) {
+        if (type.equals("Username")) {
+            Pattern p = Pattern.compile("[a-zA-Z]+"); // Alphabetical
+            Matcher m = p.matcher(value);
+            return m.matches();
+        } else if (type.equals("Password")) {
+            Pattern p = Pattern.compile(".+"); // Any character except newline
+            Matcher m = p.matcher(value);
+            return m.matches();
+        }
+        return false;
+    }
 }

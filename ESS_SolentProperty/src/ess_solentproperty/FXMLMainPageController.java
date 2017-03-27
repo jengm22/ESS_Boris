@@ -1,9 +1,7 @@
-
 package ess_solentproperty;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -16,7 +14,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 /**
- * @author 1leszd34
+ * @author Dean Leszman - 1LESZD34
  */
 public class FXMLMainPageController implements Initializable {
     Account user;
@@ -24,61 +22,65 @@ public class FXMLMainPageController implements Initializable {
     /*
         FXML Elements
     */
-    @FXML private AnchorPane apBackground;
-    @FXML private MenuBar menuMain;
-    @FXML private Menu menuFile;
-    @FXML private MenuItem miLogout;
-    @FXML private MenuItem miExit;
-    @FXML private Menu menuAccounts;
-    @FXML private MenuItem miMyAccount;
-    @FXML private SeparatorMenuItem smiAccounts;
-    @FXML private MenuItem miViewAccounts;
-    @FXML private Menu menuStock;
-    @FXML private MenuItem miStock;
-    @FXML private GridPane gpMain;
-    @FXML private Label lblNumber;
-    @FXML private Label lblAddress;
-    @FXML private Label lblStatus;
-    @FXML private Label lblServices;
+    @FXML public AnchorPane apMain;
+    @FXML public AnchorPane apSummary;
+    @FXML public MenuBar menuMain;
+    @FXML public Menu menuFile;
+    @FXML public MenuItem miLogout;
+    @FXML public MenuItem miExit;
+    @FXML public Menu menuAccounts;
+    @FXML public MenuItem miMyAccount;
+    @FXML public SeparatorMenuItem smiAccounts;
+    @FXML public MenuItem miViewAccounts;
+    @FXML public Menu menuStock;
+    @FXML public MenuItem miStock;
+    @FXML public GridPane gpSummary;
+    @FXML public Label lblSummaryNumber;
+    @FXML public Label lblSummaryAddress;
+    @FXML public Label lblSummaryStatus;
+    @FXML public Label lblSummaryServices;
     
     /*
         FXML Get Methods
     */
-    @FXML private AnchorPane getApBackground() { return apBackground; }
-    @FXML private MenuBar getMenuBar() { return menuMain; }
-    @FXML private Menu getMenuFile() { return menuFile; }
-    @FXML private MenuItem getMiLogout() { return miLogout; }
-    @FXML private MenuItem getMiExit() { return miExit; }
-    @FXML private Menu getMenuAccounts() { return menuAccounts; }
-    @FXML private MenuItem getMiMyAccount() { return miMyAccount; }
-    @FXML private SeparatorMenuItem getSmiAccounts() { return smiAccounts; }
-    @FXML private MenuItem getMiViewAccounts() { return miViewAccounts; }
-    @FXML private Menu getMenuStock() { return menuStock; }
-    @FXML private MenuItem getMiStock() { return miStock; }
-    @FXML private Label getLblNumber() { return lblNumber; }
-    @FXML private Label getLblAddress() { return lblAddress; }
-    @FXML private Label getLblStatus() { return lblStatus; }
-    @FXML private Label getLblServices() { return lblServices; }
+    @FXML public AnchorPane getAPMain() { return apMain; }
+    @FXML public AnchorPane getApSummary() { return apSummary; }
+    @FXML public MenuBar getMenuBar() { return menuMain; }
+    @FXML public Menu getMenuFile() { return menuFile; }
+    @FXML public MenuItem getMiLogout() { return miLogout; }
+    @FXML public MenuItem getMiExit() { return miExit; }
+    @FXML public Menu getMenuAccounts() { return menuAccounts; }
+    @FXML public MenuItem getMiMyAccount() { return miMyAccount; }
+    @FXML public SeparatorMenuItem getSmiAccounts() { return smiAccounts; }
+    @FXML public MenuItem getMiViewAccounts() { return miViewAccounts; }
+    @FXML public Menu getMenuStock() { return menuStock; }
+    @FXML public MenuItem getMiStock() { return miStock; }
+    @FXML public GridPane getGpSummary() { return gpSummary; }
+    @FXML public Label getLblNumber() { return lblSummaryNumber; }
+    @FXML public Label getLblAddress() { return lblSummaryAddress; }
+    @FXML public Label getLblStatus() { return lblSummaryStatus; }
+    @FXML public Label getLblServices() { return lblSummaryServices; }
     
     /*
         FXML Set Methods
     */
-    @FXML private void setApBackground(AnchorPane ap) { apBackground = ap; }
-    @FXML private void setMenuBar(MenuBar mb) { menuMain = mb; }
-    @FXML private void setMenuFile(Menu m) { menuFile = m; }
-    @FXML private void setMiLogout(MenuItem mi) { miLogout = mi; }
-    @FXML private void setMiExit(MenuItem mi) { miExit = mi; }
-    @FXML private void setMenuAccounts(Menu m) { menuAccounts = m; }
-    @FXML private void setMiMyAccount(MenuItem mi) { miMyAccount = mi; }
-    @FXML private void setSmiAccounts(SeparatorMenuItem smi) { smiAccounts = smi; }
-    @FXML private void setMiViewAccounts(MenuItem mi) { miViewAccounts = mi; }
-    @FXML private void setMenuStock(Menu m) { menuStock = m; }
-    @FXML private void setMiStock(MenuItem mi) { miStock = mi; }
-    @FXML private void setGpMain(GridPane gp) { gpMain = gp; }
-    @FXML private void setLblNumber(Label lbl) { lblNumber = lbl; }
-    @FXML private void setLblAddress(Label lbl) { lblAddress = lbl; }
-    @FXML private void setLblStatus(Label lbl) { lblStatus = lbl; }
-    @FXML private void setLblServices(Label lbl) { lblServices = lbl; }
+    @FXML public void setApMain(AnchorPane ap) { apMain = ap; }
+    @FXML public void setApSummary(AnchorPane ap) { apSummary = ap; }
+    @FXML public void setMenuBar(MenuBar mb) { menuMain = mb; }
+    @FXML public void setMenuFile(Menu m) { menuFile = m; }
+    @FXML public void setMiLogout(MenuItem mi) { miLogout = mi; }
+    @FXML public void setMiExit(MenuItem mi) { miExit = mi; }
+    @FXML public void setMenuAccounts(Menu m) { menuAccounts = m; }
+    @FXML public void setMiMyAccount(MenuItem mi) { miMyAccount = mi; }
+    @FXML public void setSmiAccounts(SeparatorMenuItem smi) { smiAccounts = smi; }
+    @FXML public void setMiViewAccounts(MenuItem mi) { miViewAccounts = mi; }
+    @FXML public void setMenuStock(Menu m) { menuStock = m; }
+    @FXML public void setMiStock(MenuItem mi) { miStock = mi; }
+    @FXML public void setGpSummary(GridPane gp) { gpSummary = gp; }
+    @FXML public void setLblSummaryNumber(Label lbl) { lblSummaryNumber = lbl; }
+    @FXML public void setLblSummaryAddress(Label lbl) { lblSummaryAddress = lbl; }
+    @FXML public void setLblSummaryStatus(Label lbl) { lblSummaryStatus = lbl; }
+    @FXML public void setLblSummaryServices(Label lbl) { lblSummaryServices = lbl; }
     
     // Log out current user from system
     private void logout() {
@@ -122,6 +124,9 @@ public class FXMLMainPageController implements Initializable {
         Stage mainPage;
     }
     
+    /*
+        Called upon initialisation of controller
+    */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Disable admin elements if the current user is not an admin
@@ -135,5 +140,8 @@ public class FXMLMainPageController implements Initializable {
             miStock.setVisible(false);
             miStock.setDisable(true);
         }
+        
+        // Create a template set of employees
+        
     }    
 }

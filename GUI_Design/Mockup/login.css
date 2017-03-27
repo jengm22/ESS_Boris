@@ -1,0 +1,27 @@
+.root {
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+}
+
+.background {
+	-fx-background-color: white;
+	-fx-border-color: white;
+}
+
+.input-field {
+	-fx-background-color: white;
+	-fx-background-insets: 0;
+	-fx-border-width: 0 0 2 0;
+	-fx-border-color: black;
+	-fx-font-size: 20;
+}
+
+.input-field:focused {
+	-fx-border-color: deepskyblue;
+}
+
+.button {
+	-fx-border-color: black;
+	-fx-border-width: 0;
+	-fx-focus-color: deepskyblue;
+}

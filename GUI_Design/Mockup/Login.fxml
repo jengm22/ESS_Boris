@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane fx:id="apBackground" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="360.0" prefWidth="640.0" styleClass="background" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btnLogin" layoutX="221.0" layoutY="288.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" stylesheets="@login.css" text="Log In" AnchorPane.bottomAnchor="34.0" AnchorPane.leftAnchor="221.0" AnchorPane.rightAnchor="221.0" AnchorPane.topAnchor="288.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgPicture" fitHeight="100.0" fitWidth="100.0" layoutX="270.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" styleClass="image" />
+      <TextField fx:id="txtUsername" layoutX="170.0" layoutY="155.0" prefHeight="50.0" prefWidth="300.0" promptText="Username" styleClass="input-field" stylesheets="@login.css" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="155.0" />
+      <PasswordField fx:id="pwPassword" layoutX="170.0" layoutY="215.0" prefHeight="50.0" prefWidth="300.0" promptText="Password" styleClass="input-field" stylesheets="@login.css" AnchorPane.bottomAnchor="95.0" AnchorPane.leftAnchor="170.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="215.0" />
+   </children>
+</AnchorPane>
