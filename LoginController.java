@@ -42,7 +42,7 @@ public class LoginController implements Initializable {
         if(txtUserName.getText().equals("user")&& txtPassword.getText().equals("pass")){
             lblStatus.setText("Login Success");
               Stage stage = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Services.fxml"));        
+            Parent root = FXMLLoader.load(getClass().getResource("FXMLMainPage.fxml"));        
             Scene scene = new Scene(root);        
             stage.setScene(scene);
             stage.show();         
